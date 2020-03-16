@@ -68,6 +68,7 @@ article:first-of-type{
 .proyectos{
     display: grid;
     grid: repeat(auto-fill, max(20em)) / repeat(auto-fill, max(20em));
+    grid-auto-rows: 20em;
     grid-gap: 2.5em 2.5em;
     
     place-items: center center;
@@ -80,13 +81,13 @@ article:first-of-type{
     }
 
     .proyectos picture img{
-        max-width: 20em;
+        max-width: 19em;
         height: auto;
         opacity: 0.9;
-        transition: 1s;
+        transition: 0.5s;
     }
         .proyectos picture img:hover{
-            max-width: 23em;
+            max-width: 22em;
             opacity: 100;
         }
 
@@ -173,4 +174,13 @@ article:first-of-type{
                                  white);*/   
 }
 #Carved_Space{
+}
+
+
+
+@media screen and (max-width: 1400px) {
+
+    .info+p{
+        max-width: 100%;
+    }
 }
