@@ -19,7 +19,7 @@ a:visited{
     grid: 1fr 10fr / repeat(2, 1fr);
     grid-row-gap: 0.5em;
 
-    background: white url("imgs/Portada/portada72.jpg") no-repeat;
+    background: white url("../imgs/Portada/portada72.jpg") no-repeat;
     background-position: center right;
     background-origin: border-box;
     background-size: contain;
@@ -58,7 +58,7 @@ a:visited{
     justify-content: flex-start;
     align-items: center;
 
-    background: url("imgs/Portada/axocorte72.png") no-repeat;
+    background: url("../imgs/Portada/axocorte72.png") no-repeat;
     background-position: center left;
     background-size: auto 100%;
 }
@@ -120,14 +120,14 @@ a:visited{
 
     .img-archi{
         grid-area: 3 / 1;
-        background: url("imgs/Portada/axocorte72.png") no-repeat;
+        background: url("../imgs/Portada/axocorte72.png") no-repeat;
         background-position: center;
         background-size: contain;
     }
 
     .img-photo{
         grid-area: 4 / 1;
-        background: url("imgs/Portada/portada72.jpg") no-repeat;
+        background: url("../imgs/Portada/portada72.jpg") no-repeat;
         background-position: center;
         background-size: contain;
     }
