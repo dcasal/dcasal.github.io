@@ -94,6 +94,10 @@ footer{
 
     .fotos img{
         max-width: 75%;
-    };
+    }
+
+    .fotos img:hover{
+        max-width: 75%;
+    }
 
 }
