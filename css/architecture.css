@@ -104,6 +104,7 @@ article:first-of-type{
     align-items: flex-start;
     
     padding: 1em 2.8em;
+    margin-bottom: 0.5em;
     background: #272727;
 }
     .titulo h2{
@@ -158,15 +159,22 @@ article:first-of-type{
         font-style: italic;
     }
 
+.unidad{
+    grid-area: span 1 / span 1;
+}
 .cuadrado{
     grid-area:span 2 / span 2;
 }
 .rectangulo{
     grid-area: span 1 / span 2;
 }
+.rectangulopie{
+    grid-area: span 2 / span 1;
+}
 .estirado{
     grid-area: span 1 / span 3;
 }
+
 
 #Home_Work{
     /*background: linear-gradient( rgba(255, 240, 245, 0.2) 5%,
