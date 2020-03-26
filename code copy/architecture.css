@@ -68,6 +68,7 @@ article:first-of-type{
 .proyectos{
     display: grid;
     grid: repeat(auto-fill, max(20em)) / repeat(auto-fill, max(20em));
+    grid-auto-rows: 20em;
     grid-gap: 2.5em 2.5em;
     
     place-items: center center;
@@ -80,13 +81,13 @@ article:first-of-type{
     }
 
     .proyectos picture img{
-        max-width: 20em;
+        max-width: 19em;
         height: auto;
         opacity: 0.9;
-        transition: 1s;
+        transition: 0.5s;
     }
         .proyectos picture img:hover{
-            max-width: 23em;
+            max-width: 22em;
             opacity: 100;
         }
 
@@ -96,13 +97,14 @@ article:first-of-type{
         align-self: center;
     }
 
-/*** architecture ***/
+/*** PROJECTS ***/
 .titulo{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     
     padding: 1em 2.8em;
+    margin-bottom: 0.5em;
     background: #272727;
 }
     .titulo h2{
@@ -157,15 +159,67 @@ article:first-of-type{
         font-style: italic;
     }
 
+
+.pfc{
+    display: grid;
+    grid: repeat(1, 0.66fr) / repeat(auto-fill, 13%);
+    grid-auto-rows: auto;
+    grid-gap: 1.5em 0.5em;
+    justify-content: space-evenly;
+    place-items: center;
+}
+.pfc picture{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+    .pfc picture img{
+        width: 100%;
+        height: auto;
+    }
+    .pfc picture p{
+        align-self: center;
+        font-size: 0.75em;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+.unidad{
+    grid-area: span 1 / span 1;
+}
 .cuadrado{
-    grid-area:span 2 / span 2;
+    grid-area: span 2 / span 2;
 }
 .rectangulo{
     grid-area: span 1 / span 2;
 }
+.rectangulopie{
+    grid-area: span 2 / span 1;
+}
 .estirado{
     grid-area: span 1 / span 3;
 }
+.estiradodoble{
+    grid-area: span 2 / span 3;
+}
+
+
+.longo{
+    grid-area: span 1 / span 4;
+}
+.longodoble{
+    grid-area: span 2 / span 4;
+}
+.axo{
+    grid-area: span 2 / span 4 ;
+}
+.portrait{
+    grid-area: span 3 / span 3;
+}
+.full{
+    grid-area: span 1 / span 7;
+}
+
 
 #Home_Work{
     /*background: linear-gradient( rgba(255, 240, 245, 0.2) 5%,
@@ -173,4 +227,13 @@ article:first-of-type{
                                  white);*/   
 }
 #Carved_Space{
+}
+
+
+
+@media screen and (max-width: 1400px) {
+
+    .info+p{
+        max-width: 100%;
+    }
 }
