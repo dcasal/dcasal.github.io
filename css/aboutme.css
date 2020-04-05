@@ -1,0 +1,181 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+
+    padding: 0;
+    margin: 0;
+
+    scroll-behavior: smooth;
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+}
+
+header {
+    grid-area: 1 / 1 ;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+        header ul {
+            display: flex;
+            justify-content: center;
+            
+            list-style-type: none;
+            padding: 1.9em 1em;
+        }
+        header li {
+            padding: 0 2em;
+            font-size: 1.2em;
+        }
+
+
+article{
+    grid-area: 1 / 1 / span 2 / span 1;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+    .indice{
+        padding-top: 10vh;
+        margin-left: 50%;
+        background-color: whitesmoke;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+        .indice h1{
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+        .indice img{
+            width: 60%;
+            height: auto;
+        }
+        .indice ul {
+            list-style-type: none;
+            padding: 1.9em 1em;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .indice li{
+            padding: 1em;
+            font-size: 0.8em;
+        }
+
+    .contenido{
+        margin: 10vh 0 0 6.5%;
+        width: 80%;
+        height: 80%;
+        overflow-y: scroll;
+    }
+    .contenido::-webkit-scrollbar {
+        display: none;
+    }
+        .contenido h2{
+            font-weight: 600;
+            font-size: 1.3em;
+            font-style: italic;
+            color: #272727;
+            margin-top: 2em;
+
+            color: tomato;
+            border-bottom: dashed 1px tomato;
+        }
+        .contenido p{
+           margin: 1em 0 0 1em;
+           /*background: linear-gradient( to right, whitesmoke, transparent);*/
+        }
+
+        .datos{
+            word-spacing: 0.5em;
+            line-height: 1.5em;
+        }
+
+
+        #Habilidades >h2{
+            margin-bottom: 1em;
+        }
+        .habilidades{
+            display: grid;
+            grid: 1fr / 1fr 1fr;
+            grid-auto-rows: 1fr;
+            grid-gap: 0.5em;
+        }
+            .habilidades picture{
+                display: flex;
+                align-items: center;
+                background-color: whitesmoke;
+            }
+            .habilidades img{
+                margin: 0.5em 1em;
+            }
+            .habilidades p{
+                font-weight: 600;
+                margin: 0;
+                padding: 0.5em;
+                color: whitesmoke;
+            }
+
+            .dominio{
+                background: tomato;
+                width: 65%;
+                border-radius: 0.5em;
+            }
+                .dominio::after{
+                    content: " Dominio";
+                    color: tomato;
+                }
+                .dominio:hover{
+                    background: rgba(255, 99, 71, 0.4);
+                    width: 30%;
+                    color: black;
+                    transition: 2s;
+                }
+
+            .avanzado{
+                background: teal;
+                width: 45%;
+                border-radius: 0.5em;
+            }
+                .avanzado:after{
+                    content: " Avanzado";
+                    color: teal;
+                }
+                .avanzado:hover{
+                    background: rgba(0, 128, 128, 0.4);
+                    width: 30%;
+                    color: black;
+                    transition: 2s; 
+                }
+                
+            .usuario{
+                background: yellowgreen;
+                width: 25%;
+                border-radius: 0.5em;
+            }
+                .usuario::after{
+                    content: " Usuario";
+                    color: yellowgreen;
+                }
+                .usuario:hover{
+                    background: rgba(153, 205, 50, 0.4);
+                    width: 20%;
+                    color: black;
+                    transition: 2s;
+                }
