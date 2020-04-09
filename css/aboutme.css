@@ -99,15 +99,68 @@ article{
         }
         .contenido p{
            margin: 1em 0 0 1em;
-           /*background: linear-gradient( to right, whitesmoke, transparent);*/
         }
 
+/*** DATOS ***/
         .datos{
             word-spacing: 0.5em;
             line-height: 1.5em;
         }
 
+/*** FORMACION + EXPERIENCIA ***/
+        .form_exp {
+            margin-top: 1em;
+            padding-left: 1em;
+            display: grid;
+            grid: 1fr / 10% 90%;
+            grid-column-gap: 0.5em;
+            align-items: center;
 
+            background: linear-gradient(to right, whitesmoke 40%, white);
+        }
+            .form_exp picture{
+                display: flex;
+                flex-direction: column;
+            }
+            .form_exp img{
+                height: 40px;
+                margin: 0.3em 0;
+
+                align-self: center;
+                justify-self: center;
+            }
+            .form_exp > img{
+                height: 60px;
+            }
+
+/*** IDIOMAS ***/
+        .idiomas{
+            margin-top: 1em;
+            width: 40%;
+            display: grid;
+            grid: 1fr / 1fr 1fr;
+            grid-auto-rows: 1fr;
+            grid-row-gap: 0.5em;    
+          }
+            .idiomas li{
+                font-weight: 600;
+                color: #272727;
+                
+                margin: 1em 0;
+                list-style-type: none;
+                border-bottom: solid rgba(169, 169, 169, 0.3) 1px;   
+            }
+            .lineas li{
+                font-weight: 600;
+                font-style: italic;
+                color: #272727;
+
+                width: 25%;
+                border-right: solid rgba(169, 169, 169, 0.3) 1px;
+                background: linear-gradient(to right, white, whitesmoke);
+            }
+
+/*** HABILIDADES ***/
         #Habilidades >h2{
             margin-bottom: 1em;
         }
@@ -124,11 +177,12 @@ article{
             }
             .habilidades img{
                 margin: 0.5em 1em;
+                height: 65px;
             }
             .habilidades p{
                 font-weight: 600;
                 margin: 0;
-                padding: 0.5em;
+                padding: 0.35em;
                 color: whitesmoke;
             }
 
@@ -166,7 +220,7 @@ article{
                 
             .usuario{
                 background: yellowgreen;
-                width: 25%;
+                width: 30%;
                 border-radius: 0.5em;
             }
                 .usuario::after{
@@ -175,7 +229,7 @@ article{
                 }
                 .usuario:hover{
                     background: rgba(153, 205, 50, 0.4);
-                    width: 20%;
+                    width: 25%;
                     color: black;
                     transition: 2s;
                 }
