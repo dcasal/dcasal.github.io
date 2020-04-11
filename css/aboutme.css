@@ -40,6 +40,11 @@ header {
             font-size: 1.2em;
         }
 
+h1{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #272727;
+}
 
 article{
     grid-area: 1 / 1 / span 2 / span 1;
@@ -94,44 +99,14 @@ article{
             color: #272727;
             margin-top: 2em;
 
-            color: tomato;
-            border-bottom: dashed 1px tomato;
+            color: #272727;
+            border-bottom: dashed 1px #272727;
         }
         .contenido p{
            margin: 1em 0 0 1em;
+           line-height: 1.8em;
+           padding-bottom: 0.8em;
         }
-
-/*** DATOS ***/
-        .datos{
-            word-spacing: 0.5em;
-            line-height: 1.5em;
-        }
-
-/*** FORMACION + EXPERIENCIA ***/
-        .form_exp {
-            margin-top: 1em;
-            padding-left: 1em;
-            display: grid;
-            grid: 1fr / 10% 90%;
-            grid-column-gap: 0.5em;
-            align-items: center;
-
-            background: linear-gradient(to right, whitesmoke 40%, white);
-        }
-            .form_exp picture{
-                display: flex;
-                flex-direction: column;
-            }
-            .form_exp img{
-                height: 40px;
-                margin: 0.3em 0;
-
-                align-self: center;
-                justify-self: center;
-            }
-            .form_exp > img{
-                height: 60px;
-            }
 
 /*** IDIOMAS ***/
         .idiomas{
@@ -160,6 +135,45 @@ article{
                 background: linear-gradient(to right, white, whitesmoke);
             }
 
+/*** FORMACION + EXPERIENCIA ***/
+        .form_exp {
+            margin-top: 1em;
+            padding-left: 1em;
+            display: grid;
+            grid: 1fr / 10% 90%;
+            grid-column-gap: 0.5em;
+            align-items: center;
+
+            background: linear-gradient(to right, whitesmoke 40%, white);
+        }
+            .form_exp picture{
+                display: flex;
+                flex-direction: column;
+            }
+            .form_exp img{
+                height: 40px;
+                margin: 0.3em 0;
+
+                align-self: center;
+                justify-self: center;
+            }
+            .form_exp > img{
+                height: 60px;
+            }
+            .form_exp strong{
+                font-weight: 600;
+            }
+
+            #Formacion .sangria, #Experiencia .sangria{
+                grid-area: span 1 / span 2;
+                padding-left: 15%;
+                margin: 0;
+
+                line-height: 1.45em;
+                text-align: justify;
+                width: 80%;
+            }
+
 /*** HABILIDADES ***/
         #Habilidades >h2{
             margin-bottom: 1em;
@@ -182,54 +196,60 @@ article{
             .habilidades p{
                 font-weight: 600;
                 margin: 0;
-                padding: 0.35em;
+                padding: 0.1em 0.8em;
                 color: whitesmoke;
             }
 
             .dominio{
-                background: tomato;
-                width: 65%;
+                background: darkslateblue;
+                width: 75%;
                 border-radius: 0.5em;
             }
                 .dominio::after{
                     content: " Dominio";
-                    color: tomato;
+                    color: darkslateblue;
                 }
                 .dominio:hover{
-                    background: rgba(255, 99, 71, 0.4);
-                    width: 30%;
+                    background: rgba(71, 61, 139, 0.4);
+                    width: 40%;
                     color: black;
                     transition: 2s;
                 }
 
             .avanzado{
-                background: teal;
-                width: 45%;
+                background: cadetblue;
+                width: 50%;
                 border-radius: 0.5em;
             }
                 .avanzado:after{
                     content: " Avanzado";
-                    color: teal;
+                    color: cadetblue;
                 }
                 .avanzado:hover{
-                    background: rgba(0, 128, 128, 0.4);
-                    width: 30%;
+                    background: rgba(95, 158, 160, 0.4);
+                    width: 35%;
                     color: black;
                     transition: 2s; 
                 }
                 
             .usuario{
-                background: yellowgreen;
-                width: 30%;
+                background: darkseagreen;
+                width: 35%;
                 border-radius: 0.5em;
             }
                 .usuario::after{
                     content: " Usuario";
-                    color: yellowgreen;
+                    color: darkseagreen;
                 }
                 .usuario:hover{
-                    background: rgba(153, 205, 50, 0.4);
-                    width: 25%;
+                    background: rgba(143, 188, 143, 0.4);
+                    width: 30%;
                     color: black;
                     transition: 2s;
                 }
+
+/*** DATOS ***/
+        #Datos p{
+            word-spacing: 0.5em;
+            line-height: 2em;
+        }
