@@ -76,12 +76,49 @@ header {
     place-self: center;
     width: 97%;
 }
-
 .img-photo{
     grid-area: 1 / 2 / span 3 / span 1;
     place-self: center;
     width: 97%;
 } 
+
+.txt-archi{
+    grid-area: 1 / 1  / span 3 / span 1;
+    text-align: center;
+    word-break: break-all;
+    position: relative;
+    margin-top: 3.5%;
+    font-size: 16em;
+    width: 80%;
+    color: transparent;
+}
+    .txt-archi:hover{
+        color: tomato;
+        transition: 2s;
+    }
+
+.txt-photo{
+    grid-area: 1 / 2  / span 3 / span 1;
+    text-align: center;
+    word-break: break-all;
+    position: relative;
+    margin-top: 3.5%;
+    margin-left: 20%;
+    font-size: 16em;
+    width: 80%;
+    color: transparent;
+}
+    .txt-photo:hover{
+        color: crimson;
+        transition: 2s;
+    }
+
+.link-archi{
+    grid-area: 1 / 1  / span 3 / span 1;
+}
+.link-photo{
+    grid-area: 1 / 2  / span 3 / span 1
+}
 
 
 @media screen and (max-width: 1600px) {
@@ -103,11 +140,28 @@ header {
         place-self: center;
         width: 90%;
     }
-
     .img-photo{
         grid-area: 4 / 1;
         place-self: center;
         width: 90%;
         margin-top: 3em;
+    }
+
+    .txt-archi{
+        grid-area: 3 / 1;
+        width: 100%;
+        margin: 0;
+    }
+    .txt-photo{
+        grid-area: 4 / 1;
+        width: 100%;
+        margin: 0;
+    }
+
+    .link-archi{
+        grid-area: 3 / 1;
+    }
+    .link-photo{
+        grid-area: 4 / 1;
     }
 }   

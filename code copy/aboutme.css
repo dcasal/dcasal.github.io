@@ -1,0 +1,300 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+
+    padding: 0;
+    margin: 0;
+
+    scroll-behavior: smooth;
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+}
+
+header {
+    grid-area: 1 / 1 ;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+        header ul {
+            display: flex;
+            justify-content: center;
+            
+            list-style-type: none;
+            padding: 1.9em 1em;
+        }
+        header li {
+            padding: 0 2em;
+            font-size: 1.2em;
+        }
+
+h1{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #272727;
+}
+
+article{
+    grid-area: 1 / 1 / span 2 / span 1;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+    .indice{
+        padding-top: 10vh;
+        margin-left: 50%;
+        background-color: whitesmoke;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+        .indice h1{
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+        .indice img{
+            width: 60%;
+            height: auto;
+        }
+        .indice ul {
+            list-style-type: none;
+            padding: 1.9em 1em;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .indice li{
+            padding: 1em;
+            font-size: 0.8em;
+        }
+
+    .contenido{
+        margin: 10vh 0 0 6.5%;
+        width: 80%;
+        height: 80%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .contenido::-webkit-scrollbar {
+        display: none;
+    }
+        .contenido h2{
+            font-weight: 600;
+            font-size: 1.3em;
+            font-style: italic;
+            color: #272727;
+            margin-top: 2em;
+
+            color: #272727;
+            border-bottom: dashed 1px #272727;
+        }
+        .contenido p{
+           margin: 1em 0 0 1em;
+           line-height: 1.8em;
+           padding-bottom: 0.8em;
+        }
+
+/*** IDIOMAS ***/
+        .idiomas{
+            margin-top: 1em;
+            width: 40%;
+            display: grid;
+            grid: 1fr / 1fr 1fr;
+            grid-auto-rows: 1fr;
+            grid-row-gap: 0.5em;    
+          }
+            .idiomas li{
+                font-weight: 600;
+                color: #272727;
+                
+                margin: 1em 0;
+                list-style-type: none;
+                border-bottom: solid rgba(169, 169, 169, 0.3) 1px;   
+            }
+            .lineas li{
+                font-weight: 600;
+                font-style: italic;
+                color: #272727;
+
+                width: 25%;
+                border-right: solid rgba(169, 169, 169, 0.3) 1px;
+                background: linear-gradient(to right, white, whitesmoke);
+            }
+
+/*** FORMACION + EXPERIENCIA ***/
+        .form_exp {
+            margin-top: 1em;
+            padding-left: 1em;
+            display: grid;
+            grid: 1fr / 10% 90%;
+            grid-column-gap: 0.5em;
+            align-items: center;
+
+            background: linear-gradient(to right, whitesmoke 40%, white);
+        }
+            .form_exp picture{
+                display: flex;
+                flex-direction: column;
+            }
+            .form_exp img{
+                height: 40px;
+                margin: 0.3em 0;
+
+                align-self: center;
+                justify-self: center;
+            }
+            .form_exp > img{
+                height: 60px;
+            }
+            .form_exp strong{
+                font-weight: 600;
+            }
+
+            #Formacion .sangria, #Experiencia .sangria{
+                grid-area: span 1 / span 2;
+                padding-left: 15%;
+                margin: 0;
+
+                line-height: 1.45em;
+                text-align: justify;
+                width: 80%;
+            }
+
+/*** HABILIDADES ***/
+        #Habilidades >h2{
+            margin-bottom: 1em;
+        }
+        .habilidades{
+            display: grid;
+            grid: 1fr / 1fr 1fr;
+            grid-auto-rows: 1fr;
+            grid-gap: 0.5em;
+        }
+            .habilidades picture{
+                display: flex;
+                align-items: center;
+                background-color: whitesmoke;
+            }
+            .habilidades img{
+                margin: 0.5em 1em;
+                height: 65px;
+            }
+            .habilidades p{
+                font-weight: 600;
+                margin: 0;
+                padding: 0.1em 0.8em;
+                color: whitesmoke;
+            }
+
+            .dominio{
+                background: darkslateblue;
+                width: 75%;
+                border-radius: 0.5em;
+            }
+                .dominio::after{
+                    content: " Dominio";
+                    color: darkslateblue;
+                }
+                .dominio:hover{
+                    background: rgba(71, 61, 139, 0.4);
+                    width: 40%;
+                    color: black;
+                    transition: 2s;
+                }
+
+            .avanzado{
+                background: cadetblue;
+                width: 50%;
+                border-radius: 0.5em;
+            }
+                .avanzado:after{
+                    content: " Avanzado";
+                    color: cadetblue;
+                }
+                .avanzado:hover{
+                    background: rgba(95, 158, 160, 0.4);
+                    width: 35%;
+                    color: black;
+                    transition: 2s; 
+                }
+                
+            .usuario{
+                background: darkseagreen;
+                width: 35%;
+                border-radius: 0.5em;
+            }
+                .usuario::after{
+                    content: " Usuario";
+                    color: darkseagreen;
+                }
+                .usuario:hover{
+                    background: rgba(143, 188, 143, 0.4);
+                    width: 30%;
+                    color: black;
+                    transition: 2s;
+                }
+
+/*** DATOS ***/
+        #Datos p{
+            word-spacing: 0.5em;
+            line-height: 2em;
+        }
+
+@media screen and (max-width: 1500px) {
+    .contenido p{
+        font-size: 0.8em;
+     }
+
+     .form_exp img{
+        height: 25px;
+    }
+    .form_exp > img{
+        height: 55px;
+    }
+
+
+    .habilidades img{
+        height: 40px;
+    }
+    .habilidades p{
+        font-size: 0.7em;
+        padding: 0 0.8em;
+    }
+    .dominio{
+        width: 65%;
+    }
+        .dominio:hover{
+            width: 40%;
+        }
+    .avanzado{
+        width: 50%;
+    }
+        .avanzado:hover{
+            width: 40%;
+        }   
+    .usuario{
+        width: 40%;
+    }
+        .usuario:hover{
+            width: 35%;
+        }
+
+    .dominio::after, .avanzado:after, .usuario::after{
+        font-size: 0.6em;
+    }
+}
