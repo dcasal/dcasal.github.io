@@ -246,7 +246,7 @@ article{
                 }
                 .dominio:hover{
                     background: rgba(71, 61, 139, 0.4);
-                    width: 40%;
+                    /** width: 40%; **/
                     color: black;
                     transition: 2s;
                 }
@@ -262,7 +262,7 @@ article{
                 }
                 .avanzado:hover{
                     background: rgba(95, 158, 160, 0.4);
-                    width: 35%;
+                    /** width: 35%; **/
                     color: black;
                     transition: 2s; 
                 }
@@ -278,7 +278,7 @@ article{
                 }
                 .usuario:hover{
                     background: rgba(143, 188, 143, 0.4);
-                    width: 30%;
+                    /** width: 30%; **/
                     color: black;
                     transition: 2s;
                 }
@@ -319,21 +319,21 @@ article{
     .dominio{
         width: 65%;
     }
-        .dominio:hover{
+        /** .dominio:hover{
             width: 40%;
-        }
+        } **/
     .avanzado{
         width: 50%;
     }
-        .avanzado:hover{
+        /** .avanzado:hover{
             width: 40%;
-        }   
+        } **/
     .usuario{
         width: 40%;
     }
-        .usuario:hover{
+        /** .usuario:hover{
             width: 35%;
-        }
+        } **/
 
     .dominio::after, .avanzado:after, .usuario::after{
         font-size: 0.6em;
