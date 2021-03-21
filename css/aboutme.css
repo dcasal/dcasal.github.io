@@ -75,7 +75,7 @@ article{
             color: darkslateblue;
         }
         .indice img{
-            width: 60%;
+            width: 70%;
             height: auto;
         }
         .indice ul {
@@ -226,7 +226,8 @@ article{
             }
             .habilidades img{
                 margin: 0.5em 1em;
-                height: 65px;
+                height: auto;
+                width: 50px;
             }
             .habilidades p{
                 font-weight: 600;
@@ -310,7 +311,8 @@ article{
 
 
     .habilidades img{
-        height: 40px;
+        height: auto;
+        width: 35px;
     }
     .habilidades p{
         font-size: 0.7em;
