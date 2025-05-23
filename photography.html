@@ -16,14 +16,16 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="aboutme.html">About Me</a></li>
+               <!-- <li><a href="aboutme.html">About Me</a></li> -->
                 <li><a href="architecture.html">Architecture</a></li>
                 <li><a href="photography.html">Photography</a></li>
+                <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <h1>Photography</h1>
+
     <article>
         <ul class="fotos">
             <img src="photography/forum01.jpg" alt="Museo del Mar">
@@ -43,6 +45,30 @@
             <img src="photography/seoul03.jpg" alt="seoul03">
             <img src="photography/paris01.jpg" alt="Le Louvre">
             <img src="photography/materiales01.jpg" alt="materiales01"> 
+            <img src="photography/pompei01.jpg" alt="pompei01">
+            <img src="photography/pompei02.webp" alt="pompei02">
+            <img src="photography/firenze01.webp" alt="firenze01">
+            <img src="photography/napoli01.webp" alt="napoli01">
+            <img src="photography/roma01.webp" alt="roma01">
+            <img src="photography/zurich01.webp" alt="zurich01">
+            <img src="photography/basel01.jpg" alt="basel01">
+            <img src="photography/basel02.jpg" alt="basel02">
+            <img src="photography/basel03.webp" alt="basel03">
+            <img src="photography/basel04.jpg" alt="basel04">
+            <img src="photography/basel05.jpg" alt="basel05">
+            <img src="photography/rotterdam01.jpg" alt="rotterdam01">
+            <img src="photography/rotterdam02.jpg" alt="rotterdam02">
+            <img src="photography/rotterdam03.jpg" alt="rotterdam03">
+            <img src="photography/rotterdam04.jpg" alt="rotterdam04">
+            <img src="photography/rotterdam05.jpg" alt="rotterdam05">
+            <img src="photography/rotterdam06.jpg" alt="rotterdam06">
+            <img src="photography/rotterdam07.jpg" alt="rotterdam07">
+            <img src="photography/delft01.jpg" alt="delft01">
+            <img src="photography/lilla01.jpg" alt="lilla01">
+            <img src="photography/lilla02.jpg" alt="lilla02">
+            <img src="photography/arouca01.jpg" alt="arouca01">
+            <img src="photography/arouca02.jpg" alt="arouca02">
+
         </ul>
     </article>
 
@@ -53,6 +79,22 @@
             <p>TOP</p>
         </footer>
     </a>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.querySelector('.fotos');
+    const images = Array.from(grid.querySelectorAll('img'));
+
+    // Mezclar las imágenes de forma aleatoria
+    images.sort(() => Math.random() - 0.5);
+
+    // Eliminar las imágenes existentes y reinsertarlas en orden aleatorio
+    grid.innerHTML = '';
+    images.forEach(img => grid.appendChild(img));
+  });
+</script>
+
 </body>
 
 </html>

@@ -1,0 +1,110 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+
+    padding: 0;
+    margin: 0;
+
+    scroll-behavior: smooth;
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+        nav ul {
+            display: flex;
+            justify-content: center;
+            
+            list-style-type: none;
+            padding: 1.9em 1em;
+        }
+        li {
+            padding: 0 2em;
+            font-size: 1.2em;
+        }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 2.5em;
+        color: #272727;
+        padding-bottom: 0.5em;
+    }
+
+.cv-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.cv-container iframe {
+  width: 60%;
+  height: 100%;
+  border: none;
+  background-color: white;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.cv-container iframe:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+    .download-link {
+      text-align: center;
+      margin: 2em 0;
+      font-size: 1.2em;
+    }
+
+    .download-link a {
+      background-color: black;
+      color: white;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .download-link a:hover {
+      background-color: #333;
+    }
+
+
+@media screen and (max-width: 1000px) {
+    .fotos{
+        grid-template-columns: repeat(auto-fill, 100%);
+        grid-auto-rows: auto;
+        grid-row-gap: 5em;
+    }
+
+    .fotos img{
+        max-width: 75%;
+    }
+
+    .fotos img:hover{
+        max-width: 75%;
+        height: auto;
+    }
+
+}
+
