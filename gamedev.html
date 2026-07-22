@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diego Casal - Portfolio Web</title>
+
+    <link href="imgs/icons/favicon.png" rel="shortcut icon"/>
+
+    <link   rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway:300i,400,600&display=swap">
+
+    <link rel="stylesheet" href="css/gamedev.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gamedev.html">Game Dev</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="photography.html">Photography</a></li>
+               <!-- <li><a href="resume.html">Resume</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <h1 class="page-heading">Game Dev</h1> -->
+
+    <section class="projects">
+
+        <!-- PROJECT 1 -->
+        <div class="project">
+            <button class="project-toggle" aria-expanded="false"
+                style="background-image: url('imgs/GameDev/Factory/Factory_cover.png');">
+                <span class="project-toggle-overlay"></span>
+                <span class="project-name">FACTORY</span>
+                <span class="project-icon">+</span>
+            </button>
+
+            <div class="project-content">
+                <div class="project-content-inner">
+
+                    <div class="video-wrapper">
+                        <!-- Replace VIDEO_ID with your YouTube video ID -->
+                        <iframe src="https://www.youtube.com/embed/f_Ny8FrbGzE?si=BF8FSympQl_-xH7X"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="project-meta">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.</p>
+                    </div>
+
+                    <div class="stills">
+                        <figure>
+                            <img src="imgs/GameDev/Factory/Factory (1).png">
+                        </figure>
+                        <figure>
+                            <img src="imgs/GameDev/Factory/Factory (2).png">
+                        </figure>
+                        <figure>
+                            <img src="imgs/GameDev/Factory/Factory (3).png">
+                        </figure>
+                        <figure>
+                            <img src="imgs/GameDev/Factory/Factory (4).png">
+                        </figure>
+                        <figure>
+                            <img src="imgs/GameDev/Factory/Factory (5).png">
+                        </figure>
+                        <figure>
+                            <img src="imgs/GameDev/Factory/Factory (6).png">
+                        </figure>
+                         <figure>
+                            <img src="imgs/GameDev/Factory/Factory (7).png">
+                        </figure>
+                        <figure>
+                            <img src="imgs/GameDev/Factory/Factory (8).png">
+                        </figure>
+                        <figure>
+                            <img src="imgs/GameDev/Factory/Factory (9).png">
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--
+        TO ADD ANOTHER PROJECT LATER:
+        copy the whole <div class="project"> ... </div> block above,
+        paste it below, and update the folder path (gamedev/project2/...),
+        video ID, name, meta info and stills.
+        -->
+
+    </section>
+
+     <script>
+        document.querySelectorAll('.project').forEach(function (project) {
+            var btn = project.querySelector('.project-toggle');
+            var content = project.querySelector('.project-content');
+
+            function setOpenHeight() {
+                if (project.classList.contains('open')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            }
+
+            btn.addEventListener('click', function () {
+                var isOpen = project.classList.toggle('open');
+                btn.setAttribute('aria-expanded', isOpen);
+                content.style.maxHeight = isOpen ? content.scrollHeight + 'px' : null;
+            });
+
+            // Recalculate if images finish loading after the click
+            content.querySelectorAll('img').forEach(function (img) {
+                img.addEventListener('load', setOpenHeight);
+            });
+
+            // Recalculate if the layout changes (e.g. resize, orientation change)
+            window.addEventListener('resize', setOpenHeight);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,51 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Diego Casal - Portfolio Web</title>
-
-    <link href="imgs/icons/favicon.png" rel="shortcut icon"/>
-
-    <link   rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Raleway:300i,400,600&display=swap">
-
-    <link rel="stylesheet" href="css/index.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diego Casal | Portfolio</title>
+<link rel="icon" href="imgs/icons/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600&display=swap">
+<link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="aboutme.html">About Me</a></li> -->
-                <li><a href="architecture.html">Design</a></li>
-                <li><a href="photography.html">Photography</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="gamedev.html">Game Dev</a></li>
+<li><a href="architecture.html">Architecture</a></li>
+<li><a href="photography.html">Photography</a></li>
+<!--<li><a href="resume.html">Resume</a></li>-->
+</ul>
+</nav>
+</header>
 
-    <section class="nombre">
-        <h1>Diego Casal Lorenzo</h1>
-        <h2>Personal Portfolio</h2>
-        <nav>
-            <ul class="RRSS">
-                <li><a href="https://www.linkedin.com/in/diego-casal-lorenzo-3266781a3/" target="_blank">
-                    <img src="imgs/logos/linkedin-logo.png" alt="LinkedIn logo"></a></li>
+<section class="hero">
+<h1>Diego Casal Lorenzo</h1>
+<h2>Environment Artist ·  Space Designer</h2>
 
-                <li><a href="https://www.instagram.com/dieg.cl/" target="_blank">
-                    <img src="imgs/logos/instagram.png" alt="Instagram logo"></a></li>
+<ul class="social">
+<li><a href="https://www.linkedin.com/in/diego-casal-lorenzo-3266781a3/" target="_blank"><img src="imgs/logos/linkedin-logo.png" alt="LinkedIn"></a></li>
+<li><a href="https://www.instagram.com/dieg.cl/" target="_blank"><img src="imgs/logos/instagram.png" alt="Instagram"></a></li>
+<li><a href="#"><img src="imgs/logos/artstation.png" alt="ArtStation"></a></li>
+</ul>
+</section>
 
-                <!-- <li><img src="imgs/logos/github-image.png" alt="Github logo"></li> -->
-            </ul>
-        </nav> 
-    </section>
-    
-    <a href="architecture.html" class="link-archi"><p class="txt-archi">DESIGN</p></a>
-    <img class="img-archi" src="imgs/Portada/axocorte72.png" alt="Architecture Section">
-    <a href="photography.html" class="link-photo"><p class="txt-photo">PHOTOGRAPHY</p></a>
-    <img class="img-photo" src="imgs/Portada/portada72.jpg" alt="Photography Section">
-    
+<main class="portfolio">
 
+<a href="gamedev.html" class="card game">
+<img src="imgs/Portada/Factory72.png" alt="Game Development">
+<span>GAME DEV</span>
+</a>
+
+<a href="architecture.html" class="card arch">
+<img src="imgs/Portada/axocorte72.png" alt="Architecture">
+<span>ARCHITECTURE</span>
+</a>
+
+<a href="photography.html" class="card photo">
+<img src="imgs/Portada/portada72.jpg" alt="Photography">
+<span>PHOTOGRAPHY</span>
+</a>
+
+</main>
 </body>
-
 </html>

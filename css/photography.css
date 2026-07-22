@@ -26,10 +26,11 @@ header {
             
             list-style-type: none;
             padding: 1.9em 1em;
+            padding-bottom: 3em;
         }
         li {
             padding: 0 2em;
-            font-size: 1.2em;
+            font-size: 0.8m;
         }
 
     h1{

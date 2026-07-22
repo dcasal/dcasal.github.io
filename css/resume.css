@@ -53,8 +53,11 @@ header {
   display: flex;
   flex: 1;
   justify-content: center;
-  padding-bottom: 2em;
+  padding-bottom: 3em;
   padding-top: 2em;
+  padding-left: 5em;
+  padding-right: 5em;
+  gap: 5em;
 }
 
 .cv-container iframe {
