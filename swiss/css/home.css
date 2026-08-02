@@ -1,0 +1,122 @@
+/* ==========================================================================
+   home.css — Home / index (neutral)
+   Diego Casal — Swiss portfolio (v2)
+   ========================================================================== */
+
+/* Neutral theme — no accent mimicry of the other sections */
+body.page-home {
+  --accent: #8b857a;
+}
+
+/* ---------- Header (centred, neutral) ---------- */
+.page-home .wordmark {
+  display: none;
+}
+
+.page-home .site-header__inner {
+  justify-content: center;
+}
+
+/* ---------- Hero (modest — the focus is on the work) ---------- */
+.hero {
+  padding-block: var(--space-8) var(--space-9);
+  text-align: center;
+}
+
+.hero h1 {
+  margin-top: var(--space-4);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 300;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.hero__roles {
+  margin-top: var(--space-3);
+  font-size: var(--fs-md);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--ink-soft);
+}
+
+.hero .social {
+  justify-content: center;
+  margin-top: var(--space-5);
+}
+
+/* ---------- Portfolio: three horizontal cards ---------- */
+.portfolio {
+  padding-block: var(--space-7) var(--space-10);
+}
+
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  background: var(--off-white);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.card:hover img {
+  transform: scale(1.04);
+}
+
+.card__label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--space-5);
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  color: var(--ink);
+  opacity: 0.55;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.card:hover .card__label {
+  opacity: 1;
+}
+
+.card__label::after {
+  content: '';
+  width: 1px;
+  height: 2rem;
+  margin-top: var(--space-3);
+  background: var(--accent);
+  transition: height var(--duration) var(--ease);
+}
+
+.card:hover .card__label::after {
+  height: 3.5rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .card {
+    aspect-ratio: 4 / 3;
+  }
+}

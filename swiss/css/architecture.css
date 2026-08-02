@@ -1,0 +1,300 @@
+/* ==========================================================================
+   architecture.css — Architecture
+   Diego Casal — Swiss portfolio (v2)
+   ========================================================================== */
+
+/* ---------- Project index (swiss picture grid) ---------- */
+.project-index {
+  margin-bottom: var(--space-9);
+}
+
+.project-index__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: var(--space-6) 0 0;
+  border-top: 1px solid var(--rule);
+}
+
+.project-index__tile {
+  display: block;
+  border: 1px solid var(--rule);
+  background: var(--white);
+  transition: border-color var(--duration) var(--ease);
+}
+
+.project-index__tile:hover {
+  border-color: var(--ink);
+}
+
+.project-index__thumb {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--off-white);
+}
+
+.project-index__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.project-index__tile:hover .project-index__thumb img {
+  transform: scale(1.04);
+}
+
+.project-index__meta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4) var(--space-4);
+}
+
+.project-index__num {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-widest);
+  color: var(--accent);
+}
+
+.project-index__name {
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.project-index__year {
+  margin-left: auto;
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wider);
+  color: var(--muted);
+}
+
+@media (max-width: 1000px) {
+  .project-index__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .project-index__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Project ---------- */
+.project {
+  margin-bottom: var(--space-10);
+}
+
+.project-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  padding-block: var(--space-7);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--space-7);
+  scroll-margin-top: calc(var(--header-h) + var(--space-4));
+}
+
+.project-head h2 {
+  font-size: var(--fs-xl);
+}
+
+.project-meta {
+  display: grid;
+  gap: var(--space-2);
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+}
+
+.project-meta li {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+
+.project-meta em {
+  display: block;
+  font-style: normal;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--muted);
+}
+
+.project-desc {
+  max-width: 70ch;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 720px) {
+  .project-head {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+}
+
+/* ---------- Image grid ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  gap: var(--space-5);
+}
+
+.figure {
+  margin: 0;
+}
+
+.figure a {
+  display: block;
+}
+
+.figure img {
+  width: 100%;
+  height: auto;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.figure a:hover img {
+  opacity: 0.82;
+}
+
+.figure__cap {
+  margin-top: var(--space-2);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--muted);
+}
+
+/* Size classes (12-column grid) */
+.sz-1x1 { grid-column: span 2; }
+.sz-1x2 { grid-column: span 2; grid-row: span 2; }
+.sz-2x1 { grid-column: span 4; }
+.sz-2x2 { grid-column: span 4; grid-row: span 2; }
+.sz-3x1 { grid-column: span 5; }
+.sz-3x2 { grid-column: span 5; grid-row: span 2; }
+.sz-4x1 { grid-column: span 7; }
+.sz-4x2 { grid-column: span 7; grid-row: span 2; }
+.sz-6x1 { grid-column: span 10; }
+.sz-3x3 { grid-column: span 5; grid-row: span 3; }
+.sz-7x1 { grid-column: span 12; }
+
+/* Back to index */
+.back-index {
+  display: inline-block;
+  margin-top: var(--space-9);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--ink);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  transition: color var(--duration) var(--ease);
+}
+
+.back-index:hover {
+  color: var(--accent);
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background: rgba(22, 22, 20, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration) var(--ease), visibility var(--duration) var(--ease);
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox__cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--space-6);
+  text-align: center;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  font-size: var(--fs-xl);
+  font-weight: 200;
+  line-height: 1;
+  color: var(--white);
+  transition: color var(--duration) var(--ease);
+}
+
+.lightbox__close:hover {
+  color: var(--accent);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .project-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .sz-7x1,
+  .sz-6x1 { grid-column: span 6; }
+  .sz-4x2,
+  .sz-4x1 { grid-column: span 4; }
+  .sz-3x3,
+  .sz-3x2,
+  .sz-3x1 { grid-column: span 3; }
+  .sz-2x2,
+  .sz-2x1 { grid-column: span 3; }
+  .sz-1x2,
+  .sz-1x1 { grid-column: span 2; }
+
+  .sz-1x2,
+  .sz-2x2,
+  .sz-3x2,
+  .sz-4x2,
+  .sz-3x3 { grid-row: auto; }
+}
+
+@media (max-width: 560px) {
+  .project-grid {
+    display: block;
+  }
+
+  .figure {
+    margin-bottom: var(--space-6);
+  }
+}
