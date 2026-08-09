@@ -8,40 +8,27 @@ body.page-home {
   --accent: #8b857a;
 }
 
-/* ---------- Header (centred, neutral) ---------- */
-.page-home .wordmark {
-  display: none;
-}
-
-.page-home .site-header__inner {
-  justify-content: center;
-}
-
 /* ---------- Hero (modest — the focus is on the work) ---------- */
 .hero {
-  padding-block: var(--space-8) var(--space-9);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-6);
   text-align: center;
 }
 
+.hero .eyebrow {
+  margin-bottom: var(--space-4);
+}
+
 .hero h1 {
-  margin-top: var(--space-4);
-  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
 }
 
-.hero__roles {
-  margin-top: var(--space-3);
-  font-size: var(--fs-md);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wider);
-  color: var(--ink-soft);
-}
-
 .hero .social {
   justify-content: center;
-  margin-top: var(--space-5);
+  margin-top: var(--space-6);
 }
 
 /* ---------- Portfolio: three horizontal cards ---------- */
@@ -74,39 +61,36 @@ body.page-home {
   transform: scale(1.04);
 }
 
+/* ---------- Section labels: vertical, per-section colour, revealed on hover ---------- */
+/* Mimics the v1 site: faint vertical label on the left edge, per-section colour,
+   fades in on hover. No scrim, no shadow. */
+.card--gamedev { --card-label: #ca3056; }  /* game dev accent (v1) */
+.card--arch   { --card-label: #e76711; }  /* architecture accent (v1) */
+.card--photo  { --card-label: #e2d515; }  /* photography accent (v1) */
+
 .card__label {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   display: flex;
+  justify-content: flex-start;
   align-items: flex-start;
-  padding: var(--space-5);
   writing-mode: vertical-rl;
-  text-transform: uppercase;
-  font-size: var(--fs-sm);
+  text-orientation: mixed;
+  padding-left: var(--space-5);
   font-weight: 600;
-  letter-spacing: var(--tracking-wider);
-  color: var(--ink);
-  opacity: 0.55;
+  text-transform: uppercase;
+  color: var(--card-label);
+  opacity: 0.1;
+  pointer-events: none;
   transition: opacity var(--duration) var(--ease);
 }
 
+.card--gamedev .card__label { font-size: clamp(2rem, 6vw, 5.2rem); }
+.card--arch   .card__label { font-size: clamp(1.4rem, 3.9vw, 3.5rem); }
+.card--photo  .card__label { font-size: clamp(1.5rem, 4.1vw, 3.7rem); }
+
 .card:hover .card__label {
   opacity: 1;
-}
-
-.card__label::after {
-  content: '';
-  width: 1px;
-  height: 2rem;
-  margin-top: var(--space-3);
-  background: var(--accent);
-  transition: height var(--duration) var(--ease);
-}
-
-.card:hover .card__label::after {
-  height: 3.5rem;
 }
 
 /* ---------- Responsive ---------- */

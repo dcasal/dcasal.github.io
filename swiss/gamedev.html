@@ -31,50 +31,80 @@
 </header>
 
 <main id="main">
-  <section class="cinema">
+  <section class="gd-showcase">
     <div class="container">
-      <div class="cinema__head">
-        <p class="eyebrow">Environment Art — Real-Time</p>
-        <h1>ABANDONED Factory</h1>
-        <p class="lede">An abandoned factory rebuilt as a real-time environment.</p>
-        <ul class="project-meta">
-          <li><em>Discipline</em>Environment Art</li>
-          <li><em>Format</em>Real-Time Showreel</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="cinema__stage">
-      <img class="cinema__poster" src="imgs/GameDev/Factory/Factory_cover.png" alt="ABANDONED Factory — poster" fetchpriority="high" decoding="async">
-      <button class="cinema__play" type="button" aria-label="Play showreel">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-    </div>
-  </section>
+      <!--
+        TO ADD ANOTHER PROJECT:
+        copy the whole <article class="gd-project"> block below, paste it after this one,
+        and update the title, media and thumbnail entries. The carousel initialises
+        automatically for every .gd-project on the page.
+      -->
+      <article class="gd-project" id="abandoned-factory">
+        <header class="gd-project__head">
+          <h1>ABANDONED Factory</h1>
+        </header>
 
-  <section class="container">
-    <div class="image-wall" aria-label="ABANDONED Factory — stills">
-      <div class="image-wall__row image-wall__row--full">
-        <figure><img src="imgs/GameDev/Factory/Factory (1).jpg" alt="ABANDONED Factory — still 1" loading="lazy" decoding="async"><figcaption>Still 01</figcaption></figure>
-      </div>
-      <div class="image-wall__row image-wall__row--pair">
-        <figure><img src="imgs/GameDev/Factory/Factory (2).jpg" alt="ABANDONED Factory — still 2" loading="lazy" decoding="async"><figcaption>Still 02</figcaption></figure>
-        <figure><img src="imgs/GameDev/Factory/Factory (3).jpg" alt="ABANDONED Factory — still 3" loading="lazy" decoding="async"><figcaption>Still 03</figcaption></figure>
-      </div>
-      <div class="image-wall__row image-wall__row--full">
-        <figure><img src="imgs/GameDev/Factory/Factory (4).jpg" alt="ABANDONED Factory — still 4" loading="lazy" decoding="async"><figcaption>Still 04</figcaption></figure>
-      </div>
-      <div class="image-wall__row image-wall__row--pair">
-        <figure><img src="imgs/GameDev/Factory/Factory (5).jpg" alt="ABANDONED Factory — still 5" loading="lazy" decoding="async"><figcaption>Still 05</figcaption></figure>
-        <figure><img src="imgs/GameDev/Factory/Factory (6).jpg" alt="ABANDONED Factory — still 6" loading="lazy" decoding="async"><figcaption>Still 06</figcaption></figure>
-      </div>
-      <div class="image-wall__row image-wall__row--full">
-        <figure><img src="imgs/GameDev/Factory/Factory (7).jpg" alt="ABANDONED Factory — still 7" loading="lazy" decoding="async"><figcaption>Still 07</figcaption></figure>
-      </div>
-      <div class="image-wall__row image-wall__row--pair">
-        <figure><img src="imgs/GameDev/Factory/Factory (8).jpg" alt="ABANDONED Factory — still 8" loading="lazy" decoding="async"><figcaption>Still 08</figcaption></figure>
-        <figure><img src="imgs/GameDev/Factory/Factory (9).jpg" alt="ABANDONED Factory — still 9" loading="lazy" decoding="async"><figcaption>Still 09</figcaption></figure>
-      </div>
+        <div class="steam-carousel" aria-label="ABANDONED Factory — media">
+          <div class="steam-carousel__viewer">
+            <div class="steam-carousel__stage" aria-live="polite"></div>
+          </div>
+
+          <div class="steam-carousel__strip">
+            <button class="steam-carousel__nav steam-carousel__nav--prev" type="button" aria-label="Previous media">&#8249;</button>
+
+            <div class="steam-carousel__track" role="tablist" aria-label="Media thumbnails">
+              <button class="steam-carousel__thumb is-active" type="button" role="tab" aria-selected="true"
+                data-media="video"
+                data-src="https://www.youtube.com/embed/f_Ny8FrbGzE?rel=0"
+                data-thumb="https://img.youtube.com/vi/f_Ny8FrbGzE/hqdefault.jpg"
+                aria-label="Showreel video">
+                <img src="https://img.youtube.com/vi/f_Ny8FrbGzE/hqdefault.jpg" alt="" loading="lazy" decoding="async">
+                <span class="steam-carousel__play" aria-hidden="true"></span>
+              </button>
+              <button class="steam-carousel__thumb" type="button" role="tab" aria-selected="false"
+                data-media="image" data-src="imgs/GameDev/Factory/Factory (1).jpg" aria-label="Still 01">
+                <img src="imgs/GameDev/Factory/Factory (1).jpg" alt="" loading="lazy" decoding="async">
+              </button>
+              <button class="steam-carousel__thumb" type="button" role="tab" aria-selected="false"
+                data-media="image" data-src="imgs/GameDev/Factory/Factory (2).jpg" aria-label="Still 02">
+                <img src="imgs/GameDev/Factory/Factory (2).jpg" alt="" loading="lazy" decoding="async">
+              </button>
+              <button class="steam-carousel__thumb" type="button" role="tab" aria-selected="false"
+                data-media="image" data-src="imgs/GameDev/Factory/Factory (3).jpg" aria-label="Still 03">
+                <img src="imgs/GameDev/Factory/Factory (3).jpg" alt="" loading="lazy" decoding="async">
+              </button>
+              <button class="steam-carousel__thumb" type="button" role="tab" aria-selected="false"
+                data-media="image" data-src="imgs/GameDev/Factory/Factory (4).jpg" aria-label="Still 04">
+                <img src="imgs/GameDev/Factory/Factory (4).jpg" alt="" loading="lazy" decoding="async">
+              </button>
+              <button class="steam-carousel__thumb" type="button" role="tab" aria-selected="false"
+                data-media="image" data-src="imgs/GameDev/Factory/Factory (5).jpg" aria-label="Still 05">
+                <img src="imgs/GameDev/Factory/Factory (5).jpg" alt="" loading="lazy" decoding="async">
+              </button>
+              <button class="steam-carousel__thumb" type="button" role="tab" aria-selected="false"
+                data-media="image" data-src="imgs/GameDev/Factory/Factory (6).jpg" aria-label="Still 06">
+                <img src="imgs/GameDev/Factory/Factory (6).jpg" alt="" loading="lazy" decoding="async">
+              </button>
+              <button class="steam-carousel__thumb" type="button" role="tab" aria-selected="false"
+                data-media="image" data-src="imgs/GameDev/Factory/Factory (7).jpg" aria-label="Still 07">
+                <img src="imgs/GameDev/Factory/Factory (7).jpg" alt="" loading="lazy" decoding="async">
+              </button>
+              <button class="steam-carousel__thumb" type="button" role="tab" aria-selected="false"
+                data-media="image" data-src="imgs/GameDev/Factory/Factory (8).jpg" aria-label="Still 08">
+                <img src="imgs/GameDev/Factory/Factory (8).jpg" alt="" loading="lazy" decoding="async">
+              </button>
+              <button class="steam-carousel__thumb" type="button" role="tab" aria-selected="false"
+                data-media="image" data-src="imgs/GameDev/Factory/Factory (9).jpg" aria-label="Still 09">
+                <img src="imgs/GameDev/Factory/Factory (9).jpg" alt="" loading="lazy" decoding="async">
+              </button>
+            </div>
+
+            <button class="steam-carousel__nav steam-carousel__nav--next" type="button" aria-label="Next media">&#8250;</button>
+          </div>
+        </div>
+      </article>
+
     </div>
   </section>
 </main>
@@ -89,17 +119,6 @@
     </ul>
   </div>
 </footer>
-
-<!-- Cinema overlay: loads the showreel only when the play button is pressed -->
-<div class="cinema-overlay" role="dialog" aria-modal="true" aria-label="Showreel">
-  <button class="cinema-overlay__close" type="button" aria-label="Close">&times;</button>
-  <div class="cinema-overlay__frame">
-    <iframe data-src="https://www.youtube.com/embed/f_Ny8FrbGzE?autoplay=1&rel=0"
-      title="ABANDONED Factory — showreel"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
-</div>
 
 <script src="js/main.js" defer></script>
 </body>
