@@ -3,52 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diego Casal | Portfolio</title>
+<title>Diego Casal — Portfolio</title>
+<meta name="description" content="Diego Casal Lorenzo — Environment Artist, Space Designer &amp; Architect. Selected work in game environments, architecture and photography.">
 <link rel="icon" href="imgs/icons/favicon.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600&display=swap">
-<link rel="stylesheet" href="css/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600&display=swap">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/home.css">
 </head>
-<body>
-<header>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="gamedev.html">Game Dev</a></li>
-<li><a href="architecture.html">Architecture</a></li>
-<li><a href="photography.html">Photography</a></li>
-<!--<li><a href="resume.html">Resume</a></li>-->
-</ul>
-</nav>
+<body class="page-home">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="wordmark" href="index.html">Diego<em> Casal</em></a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="gamedev.html">Game Dev</a></li>
+        <li><a href="architecture.html">Architecture</a></li>
+        <li><a href="photography.html">Photography</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-<h1>Diego Casal Lorenzo</h1>
-<h2>Environment Artist ·  Space Designer</h2>
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <h1>Environment Artist · Space Designer</h1>
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/in/diego-casal-lorenzo-3266781a3/" target="_blank" rel="noopener"><img src="imgs/logos/linkedin-logo.png" alt="LinkedIn" width="24" height="24"></a></li>
+        <li><a href="https://www.instagram.com/dieg.cl/" target="_blank" rel="noopener"><img src="imgs/logos/instagram.png" alt="Instagram" width="24" height="24"></a></li>
+        <li><a href="https://www.artstation.com/itsjustadoodle" target="_blank" rel="noopener"><img src="imgs/logos/artstation.png" alt="ArtStation" width="24" height="24"></a></li>
+      </ul>
+    </div>
+  </section>
 
-<ul class="social">
-<li><a href="https://www.linkedin.com/in/diego-casal-lorenzo-3266781a3/" target="_blank"><img src="imgs/logos/linkedin-logo.png" alt="LinkedIn"></a></li>
-<li><a href="https://www.instagram.com/dieg.cl/" target="_blank"><img src="imgs/logos/instagram.png" alt="Instagram"></a></li>
-<li><a href="https://www.artstation.com/itsjustadoodle"><img src="imgs/logos/artstation.png" alt="ArtStation"></a></li>
-</ul>
-</section>
+  <section class="portfolio" aria-label="Selected work">
+    <div class="container">
+      <div class="portfolio__grid">
+        <a class="card card--gamedev" href="gamedev.html">
+          <img src="imgs/Portada/Factory72.png" alt="Game Development — ABANDONED Factory" fetchpriority="high" decoding="async">
+          <span class="card__label">Game Dev</span>
+        </a>
 
-<main class="portfolio">
+        <a class="card card--arch" href="architecture.html">
+          <img src="imgs/Portada/axocorte72.png" alt="Architecture — axonometric section" loading="lazy" decoding="async">
+          <span class="card__label">Architecture</span>
+        </a>
 
-<a href="gamedev.html" class="card game">
-<img src="imgs/Portada/Factory72.png" alt="Game Development">
-<span>GAME DEV</span>
-</a>
-
-<a href="architecture.html" class="card arch">
-<img src="imgs/Portada/axocorte72.png" alt="Architecture">
-<span>ARCHITECTURE</span>
-</a>
-
-<a href="photography.html" class="card photo">
-<img src="imgs/Portada/portada72.jpg" alt="Photography">
-<span>PHOTOGRAPHY</span>
-</a>
-
+        <a class="card card--photo" href="photography.html">
+          <img src="imgs/Portada/portada72.jpg" alt="Photography — cover" loading="lazy" decoding="async">
+          <span class="card__label">Photography</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p class="muted">&copy; 2026 Diego Casal Lorenzo</p>
+  </div>
+</footer>
 </body>
 </html>
