@@ -23,7 +23,8 @@ body.page-gamedev {
 
 .cinema__stage {
   position: relative;
-  width: 100%;
+  width: min(100% - 2 * var(--space-4), var(--container));
+  margin-inline: auto;
   aspect-ratio: 21 / 9;
   overflow: hidden;
   background: var(--off-white);
@@ -85,7 +86,7 @@ body.page-gamedev {
   gap: var(--space-6);
   list-style: none;
   margin: var(--space-6) 0 0;
-  padding: var(--space-5) 0 0;
+  padding: var(--space-5) 0;
   border-top: 1px solid var(--rule);
 }
 
