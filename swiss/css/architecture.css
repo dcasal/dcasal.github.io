@@ -5,7 +5,8 @@
 
 /* ---------- Project index (swiss picture grid) ---------- */
 .project-index {
-  margin-bottom: var(--space-9);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-10);
 }
 
 .project-index__grid {
@@ -14,8 +15,6 @@
   gap: var(--space-5);
   list-style: none;
   margin: 0;
-  padding: var(--space-6) 0 0;
-  border-top: 1px solid var(--rule);
 }
 
 .project-index__tile {

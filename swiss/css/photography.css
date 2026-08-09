@@ -6,7 +6,7 @@
 /* Gallery palette — warm gallery stone + slate accent (distinct from
    the architecture terracotta and the game-dev crimson) */
 body.page-photo {
-  --paper: #efede8;
+  --paper: #fff;
   --white: #ffffff;
   --off-white: #e5e2d9;
   --ink: #26231f;
@@ -14,15 +14,20 @@ body.page-photo {
   --muted: #8b8578;
   --rule: #d9d5ca;
   --accent: #5e6c7c;
-  --header-bg: rgba(239, 237, 232, 0.92);
+  --header-bg: rgba(255, 255, 255, 0.92);
+}
+
+.photography-head {
+  margin-top: var(--space-10);
 }
 
 /* ---------- Strict gallery grid (rows & columns, uncropped) ---------- */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: var(--space-6);
-  row-gap: var(--space-8);
+  align-items: center;
+  column-gap: var(--space-9);
+  row-gap: var(--space-10);
   list-style: none;
   margin: 0;
   padding: 0;
