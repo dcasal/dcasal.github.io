@@ -60,7 +60,7 @@ body.page-home {
   display: block;
   overflow: hidden;
   aspect-ratio: 2 / 3;
-  background: var(--off-white);
+  background: var(--paper);
 }
 
 .card img {
