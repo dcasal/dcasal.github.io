@@ -87,6 +87,11 @@ h4 {
   width: min(100% - 2 * var(--space-4), var(--container));
   margin-inline: auto;
 }
+.container--content {
+  width: 70%;
+  max-width: var(--container);
+  margin-inline: auto;
+}
 
 .sr-only {
   position: absolute;

@@ -18,7 +18,7 @@ body.page-photo {
 }
 
 .photography-head {
-  margin-top: var(--space-10);
+  margin-top: var(--space-8);
 }
 
 /* ---------- Strict gallery grid (rows & columns, uncropped) ---------- */
